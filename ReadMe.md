@@ -1,17 +1,21 @@
 # React Native Chips Input
 
-An easy to use custom chips input component that can be used for both react and react native.
+An easy to use custom chips input component, built using native-base. This can be used for both react and react native.
 
 ## Getting Started
 
-`npm i react-native-chips-input`
+```
+npm i react-native-chips-input
+```
 
-`yarn add react-native-chips-input`
+```
+yarn add react-native-chips-input
+```
 
 ## Default Usage
 
 ```
-import CustomChipsInput from "react-native-chips-input";
+import { ChipsInput } from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
 const [data, setData] = useState<Array<String>>([
@@ -24,7 +28,7 @@ useEffect(() => {
     setData((val) => [...val, recipientObject?.firstName]);
 }, [apiResponse])
 
-<CustomChipsInput
+<ChipsInput
     chipsData={data}
     setChipsData={setData}
     searchText={searchText}
@@ -32,7 +36,7 @@ useEffect(() => {
 />
 ```
 
-## Properties for CustomChipsInput
+## Properties for ChipsInput
 
 | name                        | description                             | type                                               | Required |
 | :-------------------------- | :-------------------------------------- | :------------------------------------------------- | :------- |
@@ -54,7 +58,7 @@ useEffect(() => {
 ## Customised Usage Example
 
 ```
-import CustomChipsInput from "react-native-chips-input";
+import ChipsInput from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
 const [data, setData] = useState<Array<String>>([
@@ -67,7 +71,7 @@ useEffect(() => {
     setData((val) => [...val, recipientObject?.firstName]);
 }, [apiResponse])
 
-<CustomChipsInput
+<ChipsInput
     chipsData={data}
     setChipsData={setData}
     searchText={searchText}

@@ -26,7 +26,7 @@ type PropType = {
   selectedChipTextColor?: ColorType;
 };
 
-export const CustomChipsInput = (props: PropType) => {
+export const ChipsInput = (props: PropType) => {
   const [canDeleteLastone, setCanDeleteLastone] = useState<boolean>(false);
   const [isLastRecipientSelected, setIsLastRecipientSelected] =
     useState<boolean>(false);
