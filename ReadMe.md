@@ -4,13 +4,14 @@ An easy to use custom chips input component that can be used for both react and 
 
 ## Getting Started
 
-`npm i @react/react-native-chips`
-`yarn add @react/react-native-chips`
+`npm i react-native-chips-input`
+
+`yarn add react-native-chips-input`
 
 ## Default Usage
 
 ```
-import CustomChipsInput from "@react/react-native-chips";
+import CustomChipsInput from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
 const [data, setData] = useState<Array<String>>([
@@ -53,7 +54,7 @@ useEffect(() => {
 ## Customised Usage Example
 
 ```
-import CustomChipsInput from "@react/react-native-chips";
+import CustomChipsInput from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
 const [data, setData] = useState<Array<String>>([
@@ -86,4 +87,4 @@ useEffect(() => {
 
 ## License
 
-@react/react-native-chips is [LICENSE](LICENSE.MD) @ tanish_bawa
+react-native-chips-input is [LICENSE](LICENSE.MD) @ tanish_bawa
