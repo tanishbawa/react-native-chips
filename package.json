@@ -20,11 +20,7 @@
     "react-native",
     "removable-chips",
     "seletable-chips",
-    "chips",
-    "array",
-    "tags",
-    "select",
-    "delete"
+    "chips"
   ],
   "repository": {
     "type": "git",

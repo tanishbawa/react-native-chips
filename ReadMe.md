@@ -10,7 +10,7 @@ An easy to use custom chips input component, built using native-base. This can b
 
 ## Default Usage
 
-```
+```javascript
 import { ChipsInput } from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
@@ -63,7 +63,7 @@ useEffect(() => {
 
 ## Customised Usage Example
 
-```
+```javascript
 import { ChipsInput } from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
