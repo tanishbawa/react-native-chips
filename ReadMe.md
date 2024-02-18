@@ -1,4 +1,4 @@
-# React Native Custom Chips
+# React Native Chips Input
 
 An easy to use custom chips input component that can be used for both react and react native.
 
