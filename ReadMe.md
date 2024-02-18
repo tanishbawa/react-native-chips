@@ -29,8 +29,17 @@ useEffect(() => {
     setChipsData={setData}
     searchText={searchText}
     setSearchText={setSearchText}
+    containerStyles={{ borderBottomWidth: 1, borderBottomColor: "#D3D9DF" }}
 />
 ```
+
+## Desktop view
+
+![DesktopDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/5551d451-ca92-4e2a-bfd2-aedd748b10ea)
+
+## Device view
+
+![DeviceDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/2a57858f-fcff-4f26-96a5-fdb308015a20)
 
 ## Properties for ChipsInput
 
@@ -42,6 +51,7 @@ useEffect(() => {
 | setSearchText               | Setter function for input value         | (value: React.SetStateAction<string>) => void      | True     |
 | label                       | Value for input placeholder             | String                                             | False    |
 | labelTextColor              | Color for input placeholder             | ColorValue                                         | False    |
+| containerStyles             | Top level container styles              | StyleProp<ViewStyle>                               | False    |
 | focusedContainerStyles      | Container styles when input is focused  | StyleProp<ViewStyle>                               | False    |
 | inputStyles                 | Styles for input element                | StyleProp<TextStyle>                               | False    |
 | blurredContainerStyles      | Container styles when input is blurred  | StyleProp<ViewStyle>                               | False    |
@@ -54,7 +64,7 @@ useEffect(() => {
 ## Customised Usage Example
 
 ```
-import ChipsInput from "react-native-chips-input";
+import { ChipsInput } from "react-native-chips-input";
 
 const [searchText, setSearchText] = useState<string>("");
 const [data, setData] = useState<Array<String>>([
@@ -74,6 +84,7 @@ useEffect(() => {
     setSearchText={setSearchText}
     label="Search Text"
     labelTextColor="amber.900"
+    containerStyles={{ borderBottomWidth: 1, borderBottomColor: "grey", }}
     focusedContainerStyles={{ backgroundColor: "red" }}
     inputStyles={{ textAlign: "center" }}
     blurredContainerStyles={{ height: "50px" }}

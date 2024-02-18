@@ -14,6 +14,7 @@ type PropType = {
   setSearchText: (value: React.SetStateAction<string>) => void;
   label?: string;
   labelTextColor?: ColorType;
+  containerStyles?: StyleProp<ViewStyle>;
   focusedContainerStyles?: StyleProp<ViewStyle>;
   inputStyles?: StyleProp<TextStyle>;
   blurredContainerStyles?: StyleProp<ViewStyle>;
@@ -75,7 +76,7 @@ export const ChipsInput = (props: PropType) => {
 
   return (
     <Pressable
-      style={props.focusedContainerStyles}
+      style={props.containerStyles}
       flex={1}
       onPress={() => {
         inputRef?.current?.focus();
@@ -84,7 +85,13 @@ export const ChipsInput = (props: PropType) => {
       }}
     >
       {isInputFocused ? (
-        <HStack mt={-1} w="100%" flexWrap={"wrap"} alignItems="flex-start">
+        <HStack
+          style={props.focusedContainerStyles}
+          mt={-1}
+          w="100%"
+          flexWrap={"wrap"}
+          alignItems="flex-start"
+        >
           {props.chipsData?.map((name, index) => {
             const resLength = props.chipsData?.length;
             const isLast = isLastRecipientSelected && resLength === index + 1;
