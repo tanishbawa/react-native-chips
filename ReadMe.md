@@ -4,13 +4,9 @@ An easy to use custom chips input component, built using native-base. This can b
 
 ## Getting Started
 
-```
-npm i react-native-chips-input
-```
+`npm i react-native-chips-input`
 
-```
-yarn add react-native-chips-input
-```
+`yarn add react-native-chips-input`
 
 ## Default Usage
 
