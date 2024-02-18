@@ -13,24 +13,25 @@ An easy to use custom chips input component, built using native-base. This can b
 ```javascript
 import { ChipsInput } from "react-native-chips-input";
 
-const [searchText, setSearchText] = useState<string>("");
-const [data, setData] = useState<Array<String>>([
-    "Jakson",
-    "Taylor",
-    "Kyle",
-  ]);
+export default App = () => {
+  const [searchText, setSearchText] = useState < string > "";
+  const [data, setData] =
+    useState < Array < String >> ["Jakson", "Taylor", "Kyle"];
 
-useEffect(() => {
+  useEffect(() => {
     setData((val) => [...val, selectedName]);
-}, [selectedName])
+  }, [selectedName]);
 
-<ChipsInput
-    chipsData={data}
-    setChipsData={setData}
-    searchText={searchText}
-    setSearchText={setSearchText}
-    containerStyles={{ borderBottomWidth: 1, borderBottomColor: "#D3D9DF" }}
-/>
+  return (
+    <ChipsInput
+      chipsData={data}
+      setChipsData={setData}
+      searchText={searchText}
+      setSearchText={setSearchText}
+      containerStyles={{ borderBottomWidth: 1, borderBottomColor: "#D3D9DF" }}
+    />
+  );
+};
 ```
 
 ## Desktop view
@@ -66,34 +67,35 @@ useEffect(() => {
 ```javascript
 import { ChipsInput } from "react-native-chips-input";
 
-const [searchText, setSearchText] = useState<string>("");
-const [data, setData] = useState<Array<String>>([
-    "Jakson",
-    "Taylor",
-    "Kyle",
-  ]);
+export default App = () => {
+  const [searchText, setSearchText] = useState < string > "";
+  const [data, setData] =
+    useState < Array < String >> ["Jakson", "Taylor", "Kyle"];
 
-useEffect(() => {
+  useEffect(() => {
     setData((val) => [...val, selectedName]);
-}, [selectedName])
+  }, [selectedName]);
 
-<ChipsInput
-    chipsData={data}
-    setChipsData={setData}
-    searchText={searchText}
-    setSearchText={setSearchText}
-    label="Search Text"
-    labelTextColor="amber.900"
-    containerStyles={{ borderBottomWidth: 1, borderBottomColor: "grey", }}
-    focusedContainerStyles={{ backgroundColor: "red" }}
-    inputStyles={{ textAlign: "center" }}
-    blurredContainerStyles={{ height: "50px" }}
-    blurredTextStyles="amber.900"
-    chipBackgroundColor="red.100"
-    chipTextColor="red.900"
-    selectedChipBackgroundColor="amber.100"
-    selectedChipTextColor="amber.900"
-/>
+  return (
+    <ChipsInput
+      chipsData={data}
+      setChipsData={setData}
+      searchText={searchText}
+      setSearchText={setSearchText}
+      label="Search Text"
+      labelTextColor="amber.900"
+      containerStyles={{ borderBottomWidth: 1, borderBottomColor: "grey" }}
+      focusedContainerStyles={{ backgroundColor: "red" }}
+      inputStyles={{ textAlign: "center" }}
+      blurredContainerStyles={{ height: "50px" }}
+      blurredTextStyles="amber.900"
+      chipBackgroundColor="red.100"
+      chipTextColor="red.900"
+      selectedChipBackgroundColor="amber.100"
+      selectedChipTextColor="amber.900"
+    />
+  );
+};
 ```
 
 ## License
