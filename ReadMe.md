@@ -21,8 +21,8 @@ const [data, setData] = useState<Array<String>>([
   ]);
 
 useEffect(() => {
-    setData((val) => [...val, recipientObject?.firstName]);
-}, [apiResponse])
+    setData((val) => [...val, selectedName]);
+}, [selectedName])
 
 <ChipsInput
     chipsData={data}
@@ -74,8 +74,8 @@ const [data, setData] = useState<Array<String>>([
   ]);
 
 useEffect(() => {
-    setData((val) => [...val, recipientObject?.firstName]);
-}, [apiResponse])
+    setData((val) => [...val, selectedName]);
+}, [selectedName])
 
 <ChipsInput
     chipsData={data}
