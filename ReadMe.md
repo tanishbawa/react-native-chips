@@ -10,13 +10,12 @@ An easy to use custom chips input component, built using native-base. This can b
 
 ## Default Usage
 
-```javascript
+```JSX
 import { ChipsInput } from "react-native-chips-input";
 
 export default App = () => {
-  const [searchText, setSearchText] = useState < string > "";
-  const [data, setData] =
-    useState < Array < String >> ["Jakson", "Taylor", "Kyle"];
+  const [searchText, setSearchText] = useState<string>("");
+  const [data, setData] = useState<Array<String>>(["Jakson", "Taylor", "Kyle"]);
 
   useEffect(() => {
     setData((val) => [...val, selectedName]);
@@ -64,13 +63,12 @@ export default App = () => {
 
 ## Customised Usage Example
 
-```javascript
+```JSX
 import { ChipsInput } from "react-native-chips-input";
 
 export default App = () => {
-  const [searchText, setSearchText] = useState < string > "";
-  const [data, setData] =
-    useState < Array < String >> ["Jakson", "Taylor", "Kyle"];
+  const [searchText, setSearchText] = useState<string>("");
+  const [data, setData] = useState<Array<String>>(["Jakson", "Taylor", "Kyle"]);
 
   useEffect(() => {
     setData((val) => [...val, selectedName]);
