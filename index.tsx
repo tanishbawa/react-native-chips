@@ -1,6 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Pressable, Text, Box, HStack, Circle, Input } from "native-base";
-import { Platform, StyleProp, TextStyle, ViewStyle } from "react-native";
+import {
+  ColorValue,
+  Platform,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+} from "react-native";
 import {
   ColorType,
   ResponsiveValue,
@@ -14,7 +20,8 @@ type PropType = {
   setSearchText: (value: React.SetStateAction<string>) => void;
   numberOfVisibleNames?: number;
   label?: string;
-  labelTextColor?: ColorType;
+  labelTextColor?: ColorValue;
+  inputTextColor?: ColorType;
   containerStyles?: StyleProp<ViewStyle>;
   focusedContainerStyles?: StyleProp<ViewStyle>;
   inputStyles?: StyleProp<TextStyle>;
@@ -174,12 +181,11 @@ export const ChipsInput = (props: PropType) => {
           })}
           <Input
             placeholder={props.label}
-            placeholderTextColor={props.labelTextColor}
-            style={props.inputStyles}
+            placeholderTextColor={props?.labelTextColor ?? "red.100"}
+            style={[{ backgroundColor: "white" }, props.inputStyles]}
             minW={100}
             mt={-1}
             flex={1}
-            // key={Math.random()}
             autoFocus={true}
             ref={inputRef}
             value={props.searchText}
@@ -189,7 +195,7 @@ export const ChipsInput = (props: PropType) => {
             borderWidth={0}
             fontWeight={400}
             fontSize={16}
-            color={props.labelTextColor ?? "black"}
+            color={props.inputTextColor ?? "black"}
             onFocus={() => {
               setIsInputFocused(true);
               setIsLastRecipientSelected(false);

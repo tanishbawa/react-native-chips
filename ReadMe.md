@@ -56,6 +56,7 @@ export default App = () => {
 | numberOfVisibleNames        | Number for visible names when input is blurred | number                                             | False    |
 | label                       | Value for input placeholder                    | String                                             | False    |
 | labelTextColor              | Color for input placeholder                    | ColorValue                                         | False    |
+| inputTextColor              | Color for input value                          | ColorType                                          | False    |
 | containerStyles             | Top level container styles                     | StyleProp<ViewStyle>                               | False    |
 | focusedContainerStyles      | Container styles when input is focused         | StyleProp<ViewStyle>                               | False    |
 | inputStyles                 | Styles for input element                       | StyleProp<TextStyle>                               | False    |
@@ -88,6 +89,7 @@ export default App = () => {
       numberOfVisibleNames={4} // For invalid numbers (e.g 0, -2), default value of 2 will be considered
       label="Search Text"
       labelTextColor="amber.900"
+      inputTextColor="amber.900"
       containerStyles={{ borderBottomWidth: 1, borderBottomColor: "grey" }}
       focusedContainerStyles={{ backgroundColor: "red" }}
       inputStyles={{ textAlign: "center" }}
