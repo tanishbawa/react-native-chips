@@ -1,6 +1,10 @@
 # React Native Chips Input
 
-An easy to use custom chips input component, built using native-base. This can be used for both react and react native.
+An easy to use custom chips input component, built using NativeBase. This can be used for both react and react native.
+
+## Prerequisites
+
+Since this component is built using [NativeBase](https://nativebase.io/). Please follow NativeBase [installation](https://docs.nativebase.io/installation) guide to proceed.
 
 ## Getting Started
 
@@ -88,7 +92,7 @@ export default App = () => {
       focusedContainerStyles={{ backgroundColor: "red" }}
       inputStyles={{ textAlign: "center" }}
       blurredContainerStyles={{ height: "50px" }}
-      blurredTextStyles="amber.900"
+      blurredTextStyles={{color: 'black'}}
       chipBackgroundColor="red.100"
       chipTextColor="red.900"
       selectedChipBackgroundColor="amber.100"

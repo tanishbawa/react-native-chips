@@ -19,7 +19,7 @@ type PropType = {
   focusedContainerStyles?: StyleProp<ViewStyle>;
   inputStyles?: StyleProp<TextStyle>;
   blurredContainerStyles?: StyleProp<ViewStyle>;
-  blurredTextStyles?: ColorType;
+  blurredTextStyles?: StyleProp<TextStyle>;
   chipBackgroundColor?: ResponsiveValue<ColorType | ILinearGradientProps>;
   chipTextColor?: ColorType;
   selectedChipBackgroundColor?: ResponsiveValue<
@@ -129,7 +129,7 @@ export const ChipsInput = (props: PropType) => {
                 {isLast && (
                   <Circle
                     size={3}
-                    bg={props.selectedChipBackgroundColor ?? "primary.100"}
+                    bg={props.selectedChipBackgroundColor ?? "#3179CC"}
                     position={"absolute"}
                     mr="auto"
                     ml={-1}
@@ -141,7 +141,7 @@ export const ChipsInput = (props: PropType) => {
                   borderRadius={!isLast ? 20 : 0}
                   bg={
                     isLast
-                      ? props.selectedChipBackgroundColor ?? "primary.100"
+                      ? props.selectedChipBackgroundColor ?? "#3179CC"
                       : props.chipBackgroundColor ?? "#3179cc1a"
                   }
                   px={3}
@@ -153,7 +153,7 @@ export const ChipsInput = (props: PropType) => {
                     color={
                       isLast
                         ? props.selectedChipTextColor ?? "white"
-                        : props.chipTextColor ?? "primary.100"
+                        : props.chipTextColor ?? "#3179CC"
                     }
                   >
                     {name}
@@ -163,7 +163,7 @@ export const ChipsInput = (props: PropType) => {
                 {isLast && (
                   <Circle
                     size={3}
-                    bg={props.selectedChipBackgroundColor ?? "primary.100"}
+                    bg={props.selectedChipBackgroundColor ?? "#3179CC"}
                     ml="auto"
                     mr={-1}
                     mt={-1}
@@ -228,9 +228,10 @@ export const ChipsInput = (props: PropType) => {
           }}
         >
           <Text
+            style={props.blurredTextStyles}
             fontWeight={400}
             fontSize={15}
-            color={props.blurredTextStyles ?? "primary.100"}
+            color={"#3179CC"}
           >
             {blurredNameStr}
           </Text>
