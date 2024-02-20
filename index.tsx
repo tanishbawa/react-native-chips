@@ -12,6 +12,7 @@ type PropType = {
   setChipsData: React.Dispatch<React.SetStateAction<String[]>>;
   searchText: string;
   setSearchText: (value: React.SetStateAction<string>) => void;
+  numberOfVisibleNames?: number;
   label?: string;
   labelTextColor?: ColorType;
   containerStyles?: StyleProp<ViewStyle>;
@@ -52,20 +53,47 @@ export const ChipsInput = (props: PropType) => {
   useEffect(() => {
     if (props.chipsData?.length > 0) {
       let tempStr = "";
+      //Create string with all names
       props.chipsData.map((name, index) => {
         tempStr = tempStr + name;
         if (index + 1 !== props.chipsData?.length) {
           tempStr += ", ";
         }
       });
-      if (props.chipsData?.length > 2) {
-        const lengthBeforeSlice =
-          props.chipsData[0]?.length + props.chipsData[1]?.length + 2;
-        const remainingNamesLength = props.chipsData?.length - 2;
+
+      //Show names according to user requirement
+      let numberOfVisibleNames = 2;
+      //Checking for valid visible names number
+      if (props?.numberOfVisibleNames) {
+        if (
+          props?.numberOfVisibleNames > 0 &&
+          props?.numberOfVisibleNames <= props.chipsData?.length
+        ) {
+          numberOfVisibleNames = props?.numberOfVisibleNames;
+        } else if (
+          props?.numberOfVisibleNames > 0 &&
+          props?.numberOfVisibleNames > props.chipsData?.length
+        ) {
+          numberOfVisibleNames = props.chipsData?.length;
+        }
+      }
+
+      //Calculate string length for visible names
+      if (props.chipsData?.length > numberOfVisibleNames) {
+        let lengthBeforeSlice = 0;
+        for (let i = 0; i < numberOfVisibleNames; i++) {
+          lengthBeforeSlice += props.chipsData[i]?.length;
+
+          if (i + 1 < numberOfVisibleNames) {
+            lengthBeforeSlice += 2; // added 2 because of , and space except on last name
+          }
+        }
+
+        //Calculate string length for hidden names
+        const hiddenNames = props.chipsData?.length - numberOfVisibleNames;
 
         tempStr =
-          tempStr.slice(0, lengthBeforeSlice) +
-          ` & ${remainingNamesLength} more`;
+          tempStr.slice(0, lengthBeforeSlice) + ` & ${hiddenNames} more`;
       }
 
       setBlurredNameStr(tempStr);

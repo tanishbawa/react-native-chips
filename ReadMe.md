@@ -43,23 +43,24 @@ export default App = () => {
 
 ## Properties for ChipsInput
 
-| name                        | description                             | type                                               | Required |
-| :-------------------------- | :-------------------------------------- | :------------------------------------------------- | :------- |
-| chipsData                   | Data for chips                          | Array<String>                                      | True     |
-| setChipsData                | Setter function for chips               | React.Dispatch<React.SetStateAction<String[]>>     | True     |
-| searchText                  | Value for input                         | String                                             | True     |
-| setSearchText               | Setter function for input value         | (value: React.SetStateAction<string>) => void      | True     |
-| label                       | Value for input placeholder             | String                                             | False    |
-| labelTextColor              | Color for input placeholder             | ColorValue                                         | False    |
-| containerStyles             | Top level container styles              | StyleProp<ViewStyle>                               | False    |
-| focusedContainerStyles      | Container styles when input is focused  | StyleProp<ViewStyle>                               | False    |
-| inputStyles                 | Styles for input element                | StyleProp<TextStyle>                               | False    |
-| blurredContainerStyles      | Container styles when input is blurred  | StyleProp<ViewStyle>                               | False    |
-| blurredTextStyles           | Styles for text when input is blurred   | StyleProp<TextStyle>                               | False    |
-| chipBackgroundColor         | Chip background color when not selected | ResponsiveValue<ColorType \| ILinearGradientProps> | False    |
-| chipTextColor               | Chip text color when not selected       | ColorType                                          | False    |
-| selectedChipBackgroundColor | Chip background color when selected     | ResponsiveValue<ColorType \| ILinearGradientProps> | False    |
-| selectedChipTextColor       | Chip text color when selected           | ColorType                                          | False    |
+| name                        | description                                    | type                                               | Required |
+| :-------------------------- | :--------------------------------------------- | :------------------------------------------------- | :------- |
+| chipsData                   | Data for chips                                 | Array<String>                                      | True     |
+| setChipsData                | Setter function for chips                      | React.Dispatch<React.SetStateAction<String[]>>     | True     |
+| searchText                  | Value for input                                | String                                             | True     |
+| setSearchText               | Setter function for input value                | (value: React.SetStateAction<string>) => void      | True     |
+| numberOfVisibleNames        | Number for visible names when input is blurred | number                                             | False    |
+| label                       | Value for input placeholder                    | String                                             | False    |
+| labelTextColor              | Color for input placeholder                    | ColorValue                                         | False    |
+| containerStyles             | Top level container styles                     | StyleProp<ViewStyle>                               | False    |
+| focusedContainerStyles      | Container styles when input is focused         | StyleProp<ViewStyle>                               | False    |
+| inputStyles                 | Styles for input element                       | StyleProp<TextStyle>                               | False    |
+| blurredContainerStyles      | Container styles when input is blurred         | StyleProp<ViewStyle>                               | False    |
+| blurredTextStyles           | Styles for text when input is blurred          | StyleProp<TextStyle>                               | False    |
+| chipBackgroundColor         | Chip background color when not selected        | ResponsiveValue<ColorType \| ILinearGradientProps> | False    |
+| chipTextColor               | Chip text color when not selected              | ColorType                                          | False    |
+| selectedChipBackgroundColor | Chip background color when selected            | ResponsiveValue<ColorType \| ILinearGradientProps> | False    |
+| selectedChipTextColor       | Chip text color when selected                  | ColorType                                          | False    |
 
 ## Customised Usage Example
 
@@ -80,6 +81,7 @@ export default App = () => {
       setChipsData={setData}
       searchText={searchText}
       setSearchText={setSearchText}
+      numberOfVisibleNames={4} // For invalid numbers (e.g 0, -2), default value of 2 will be considered
       label="Search Text"
       labelTextColor="amber.900"
       containerStyles={{ borderBottomWidth: 1, borderBottomColor: "grey" }}
