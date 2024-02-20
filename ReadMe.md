@@ -35,11 +35,11 @@ export default App = () => {
 
 ## Desktop view
 
-![DesktopDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/5551d451-ca92-4e2a-bfd2-aedd748b10ea)
+![DesktopDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/e41d2848-1fcd-4805-8e90-456beaa6db1e)
 
 ## Device view
 
-![DeviceDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/2a57858f-fcff-4f26-96a5-fdb308015a20)
+![DeviceDemo](https://github.com/tanishbawa/react-native-chips/assets/44227602/a77e4a6a-418d-4af5-9bd6-e3c247732bc0)
 
 ## Properties for ChipsInput
 
